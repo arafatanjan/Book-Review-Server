@@ -159,7 +159,7 @@ app.get('/reviews/:id', async (req, res) => {
 //Route for update review
 app.patch("/review/update/:id", async (req, res) => {
   const id = req.params.id;
-console.log(req.body)
+
   // Check if the ID is a valid MongoDB ObjectId
   if (!ObjectId.isValid(id)) {
     return res.status(400).json({ error: 'Invalid ID format' });
